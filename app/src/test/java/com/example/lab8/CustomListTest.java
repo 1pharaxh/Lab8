@@ -38,4 +38,13 @@ public class CustomListTest {
         assertTrue(mocklist.countCities() == 1);
     }
 
+    @Test
+    public void delete() {
+        mocklist =  new CustomList(null, new ArrayList<City>());
+        City city = new City("Toronto", "Ontario");
+        mocklist.addCity(city);
+        mocklist.delete(city);
+        assertEquals(false, mocklist.hasCity(city));
+    }
+
 }
