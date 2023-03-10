@@ -30,7 +30,12 @@ public class CustomListTest {
         mocklist.addCity(city);
         assertEquals(true, mocklist.hasCity(city));
     }
-
-
+    @Test
+    public void countCity(){
+        mocklist =  new CustomList(null, new ArrayList<City>());
+        City city = new City("Toronto", "Ontario");
+        mocklist.addCity(city);
+        assertTrue(mocklist.countCities() == 1);
+    }
 
 }
